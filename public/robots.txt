@@ -1,0 +1,3 @@
+# CocktailCraft Bar - Robots.txt
+User-agent: *
+Allow: /

@@ -1,0 +1,119 @@
+---
+import { cocktails } from "../data/cocktails.js";
+---
+
+<section
+    id="cocktails"
+    class="py-20 bg-gradient-to-br from-gray-900 to-gray-800"
+>
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+            <p
+                class="text-lg text-purple-300 mb-4 tracking-widest uppercase font-light"
+                style="font-family: var(--font-body); letter-spacing: 0.2em;"
+            >
+                Signature Collection
+            </p>
+            <h2
+                class="text-5xl lg:text-7xl font-bold mb-6"
+                style="font-family: var(--font-heading);"
+            >
+                <span
+                    class="bg-gradient-to-r from-purple-400 to-yellow-400 bg-clip-text text-transparent italic"
+                    >Our Cocktail</span
+                >
+            </h2>
+            <h3
+                class="text-4xl lg:text-5xl text-gray-100 font-light italic mb-6"
+                style="font-family: var(--font-elegant);"
+            >
+                Menu
+            </h3>
+            <p
+                class="text-xl text-gray-300 max-w-4xl mx-auto font-light leading-relaxed"
+                style="font-family: var(--font-body); line-height: 1.8;"
+            >
+                Handcrafted cocktails made with premium spirits and fresh
+                ingredients. Each drink is a masterpiece waiting to be savored,
+                a symphony of flavors that dance on your palate.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {
+                cocktails.map((cocktail) => (
+                    <div class="bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-700 overflow-hidden hover:border-purple-500/50 transition-all duration-300 group hover:transform hover:-translate-y-2 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10">
+                        <div class="relative overflow-hidden">
+                            <img
+                                src={cocktail.image}
+                                alt={cocktail.name}
+                                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                            <div
+                                class="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg"
+                                style="font-family: var(--font-body);"
+                            >
+                                {cocktail.price}
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3
+                                class="text-2xl font-bold text-gray-100 mb-3"
+                                style="font-family: var(--font-elegant);"
+                            >
+                                {cocktail.name}
+                            </h3>
+                            <p
+                                class="text-gray-400 mb-6 text-sm leading-relaxed font-light"
+                                style="font-family: var(--font-body); line-height: 1.6;"
+                            >
+                                {cocktail.description}
+                            </p>
+                            <div class="mb-8">
+                                <h4
+                                    class="text-sm font-semibold text-purple-400 mb-3 tracking-wide uppercase"
+                                    style="font-family: var(--font-body); letter-spacing: 0.1em;"
+                                >
+                                    Crafted with:
+                                </h4>
+                                <div class="flex flex-wrap gap-2">
+                                    {cocktail.ingredients.map((ingredient) => (
+                                        <span
+                                            class="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-xs border border-purple-700 font-light"
+                                            style="font-family: var(--font-body);"
+                                        >
+                                            {ingredient}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                            <button
+                                class="w-full bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1 text-sm tracking-wide uppercase"
+                                style="font-family: var(--font-body); letter-spacing: 0.1em;"
+                            >
+                                Order This Cocktail
+                            </button>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+
+        <div class="text-center mt-16">
+            <p
+                class="text-gray-400 mb-8 text-lg font-light italic"
+                style="font-family: var(--font-elegant);"
+            >
+                "Can't find what you're looking for? Our master mixologists love
+                a challenge."
+            </p>
+            <button
+                class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-gray-900 px-10 py-4 rounded-lg hover:from-yellow-600 hover:to-yellow-700 transition-all duration-300 font-semibold shadow-lg text-lg tracking-wide uppercase"
+                style="font-family: var(--font-body); letter-spacing: 0.1em;"
+            >
+                Request Custom Creation
+            </button>
+        </div>
+    </div>
+</section>

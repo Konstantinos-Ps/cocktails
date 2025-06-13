@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+    <section
+        class="min-h-screen bg-gradient-to-br from-gray-900 to-purple-900/50 flex items-center justify-center py-20 px-6 text-center"
+    >
+        <div class="container mx-auto max-w-4xl">
+            <div class="relative mb-12">
+                <img
+                    src="/404.png"
+                    alt="404 Error"
+                    class="relative max-w-xs mx-auto rounded-xl"
+                />
+            </div>
+
+            <h1
+                class="text-5xl md:text-7xl font-bold mb-6"
+                style="font-family: var(--font-heading);"
+            >
+                <span class="text-gray-100">404: </span>
+                <span
+                    class="bg-gradient-to-r from-purple-400 to-yellow-400 bg-clip-text text-transparent italic"
+                    >Lost in the Bar</span
+                >
+            </h1>
+
+            <p
+                class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed font-light"
+                style="font-family: var(--font-body); line-height: 1.8;"
+            >
+                The cocktail you're looking for has either been shaken too hard
+                or stirred out of existence. Let's get you back to something
+                delicious at our main bar.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a
+                    href="/"
+                    class="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1 text-lg tracking-wide uppercase"
+                    style="font-family: var(--font-body); letter-spacing: 0.1em;"
+                >
+                    Return to Bar
+                </a>
+                <a
+                    href="/#cocktails"
+                    class="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300 font-semibold text-lg tracking-wide uppercase"
+                    style="font-family: var(--font-body); letter-spacing: 0.1em;"
+                >
+                    Browse Cocktails
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>

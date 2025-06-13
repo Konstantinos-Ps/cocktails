@@ -1,0 +1,17 @@
+/src
+  /components
+    Header.astro         // Top nav bar
+    Hero.astro           // Hero section with intro
+    CocktailCard.astro   // Reusable card for drinks
+    Services.astro       // Text + visuals
+    Footer.astro
+
+  /pages
+    index.astro          // Home page
+
+  /data
+    cocktails.js         // Cocktail info for cards
+
+/public
+  /images                // Static assets
+  gsap.min.js            // Or import via CDN
